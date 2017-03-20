@@ -2,7 +2,6 @@ from unittest import TestCase
 from unittest.mock import patch
 import calc
 
-
 class TestCalculator(TestCase):
     def test_should_raise_exception_if_input_is_not_a_number(self):
         calculator=calc.Calculator()
