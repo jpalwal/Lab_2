@@ -12,7 +12,7 @@ class DenominatorIsZero(Exception):
     pass
 
 class AbstractCalculator(object):
-    __metaclass__ = abc.ABCmeta
+    #__metaclass__ = abc.ABCmeta
     @abc.abstractmethod
     def Add(self,arg1,arg2):
         """adds two numbers"""
