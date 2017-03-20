@@ -84,5 +84,5 @@ class TestCalculator(TestCase):
         self.assertAlmostEqual(calculator.Sub(first,second),expected_sum)
 
 
-if __name__ == '__main__':
-    TestCase.main()
+#if __name__ == '__main__':
+#    TestCase.main()
