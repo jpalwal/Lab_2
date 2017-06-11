@@ -29,11 +29,13 @@ class TestCalculator(TestCase):
         calculator=calc.Calculator()
         first = 0
         self.assertRaises(calc.DenominatorIsZero(),calculator.Div(first,first))
-    @patch('numpy.derivative',return_value='a')
+    @patch('sympy.diff',return_value='sin(x)')
     def test_should_derivative_return_correct_result_for_integer_and_string_as_input(self):
-        expected_output='a'
+        expected_output='sin(x)'
+        f = 'sin(x)'
+        ord = 100
         calculator=calc.Calculator()
-        assertEqual(calculator.Derivative(),expected_output)
+        assertEqual(calculator.Derivative(f,ord),expected_output)
     def test_should_add_return_correct_sum_for_integer_values_as_input(self):
         calculator=calc.Calculator()
         first=10
