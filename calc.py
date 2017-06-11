@@ -1,6 +1,6 @@
 #import sys
 import abc
-import numpy
+import sympy
 
 class NotAString(Exception):
     pass
@@ -50,7 +50,7 @@ class Calculator(AbstractCalculator):
             raise NotANumber()
         if not self._is_string(func):
             raise NotAString()
-        return numpy.derivative(func, order)
+        return sympy.diff(func, 'x', order)
     def _is_number(self,number):
         return isinstance(number,int)
     def _is_string(self,string):
